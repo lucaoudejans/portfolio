@@ -1,0 +1,386 @@
+/* Reset en algemene stijlen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Algemene stijlen */
+body{
+    background-color: rgb(254, 252, 249);
+    color: rgb(61, 79, 157);
+}
+
+a{
+    cursor: pointer;
+    color: inherit;
+}
+
+header nav{
+    display: grid;
+    grid-template-columns: 1.5fr 5fr;
+    align-items: center;
+    border-bottom: solid 0.01em;
+    background-color: white;
+    padding: 2em;
+    font-weight: 600;
+}
+
+header ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 3em;
+    cursor: pointer;
+}
+
+/* Homepage specifieke stijlen */
+.homepage section:first-of-type{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 47em;
+    gap: 0.5em;
+}
+
+.homepage section:first-of-type h1{
+    font-size: 10em;
+}
+
+.homepage section:first-of-type h2{
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.homepage section:nth-of-type(2){
+    background-color: rgb(232, 231, 231);
+
+}
+
+.homepage section:nth-of-type(2),
+.homepage section:nth-of-type(4) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10em;
+    height: 45em;
+    padding: 2em;
+}
+
+.homepage section:nth-of-type(2) img,
+.homepage section:nth-of-type(4) img {
+    width: 20em;
+}
+
+.homepage section:nth-of-type(2) div,
+.homepage section:nth-of-type(4) div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 24em;
+    font-weight: 300;
+}
+
+.homepage section:nth-of-type(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20em;
+    height: 7em;
+    padding: 2em;
+    background-color: rgb(61, 79, 157);
+    color: rgb(254, 252, 249);
+}
+
+.homepage section:nth-of-type(3) ul {
+    display: flex;
+    gap: 2em;
+    font-weight: 600;
+}
+
+.homepage section:nth-of-type(3) li {
+    font-weight: 500;
+}
+
+.homepage section:nth-of-type(4) div{
+    align-items: center;
+}
+
+footer.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    border-top: solid 0.1em;
+}
+
+footer.home button{
+    padding: 0.7em;
+    border-radius: 1em;
+    border: none;
+    font-weight: 600;
+    font-size: 1em;
+    background-color: rgb(61, 79, 157);
+    color: rgb(254, 252, 249);
+    cursor: pointer;
+}
+
+/* Portfolio pagina specifieke stijlen */
+.portfolio section:first-of-type{
+    margin-top: 5em;
+}
+
+.portfolio section:first-of-type,
+.portfolio section:nth-of-type(2),
+.portfolio section:nth-of-type(3),
+.portfolio section:nth-of-type(4),
+.portfolio section:nth-of-type(5){
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5em;
+}
+
+.portfolio section:first-of-type ul,
+.portfolio section:nth-of-type(2) ul,
+.portfolio section:nth-of-type(3) ul,
+.portfolio section:nth-of-type(4) ul,
+.portfolio section:nth-of-type(5) ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0em 20em;
+    position: relative;
+    margin-top: 1em;
+}
+
+.portfolio section:first-of-type img,
+.portfolio section:nth-of-type(2) img,
+.portfolio section:nth-of-type(3) img,
+.portfolio section:nth-of-type(4) img,
+.portfolio section:nth-of-type(5) img{
+    width: 25em;
+}
+
+.portfolio section:first-of-type li,
+.portfolio section:nth-of-type(2) li,
+.portfolio section:nth-of-type(3) li,
+.portfolio section:nth-of-type(4) li,
+.portfolio section:nth-of-type(5) li{
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio section:first-of-type li>h2,
+.portfolio section:nth-of-type(2) li>h2,
+.portfolio section:nth-of-type(3) li>h2,
+.portfolio section:nth-of-type(4) li>h2,
+.portfolio section:nth-of-type(5) li>h2{
+    font-weight: 600;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.portfolio section:first-of-type li>p,
+.portfolio section:nth-of-type(2) li>p,
+.portfolio section:nth-of-type(3) li>p,
+.portfolio section:nth-of-type(4) li>p,
+.portfolio section:nth-of-type(5) li>p{
+    font-weight: 200;
+    font-size: 0.9em;
+}
+
+.portfolio section:first-of-type ul::before,
+.portfolio section:nth-of-type(2) ul::before,
+.portfolio section:nth-of-type(3) ul::before,
+.portfolio section:nth-of-type(4) ul::before,
+.portfolio section:nth-of-type(5) ul::before{
+    content: '';
+    position: absolute;
+    top: 15%;
+    bottom: 15%;
+    left: 50%;
+    width: 0.1em;
+    background-color: rgb(61, 79, 157);
+    transform: translateX(-50%);
+}
+
+.item{
+    position: relative;
+    margin: 1em;
+    cursor: pointer;
+}
+
+.extra-info{
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2em;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 1s ease;
+}
+
+.extra-info p{
+    font-weight: 200;
+    font-size: 0.9em;
+    width: 28em;
+}
+
+.extra-info a{
+    text-decoration: underline;
+}
+
+/* experience page css */
+
+main.experience{
+    display: flex;
+    justify-content: center;
+}
+
+.experience img{
+    width: 38em;
+    padding: 2em;
+}
+
+/* responsive maken */
+@media only screen and (max-width: 700px) {
+
+    header nav{
+        display: grid;
+        grid-template-columns: 0fr;
+        justify-content: center;
+        border-bottom: solid 0.01em;
+        background-color: white;
+        padding: 2em;
+        font-weight: 400;
+        font-size: 0.6em;
+    }
+
+    header nav ul{
+        gap: 2em;
+    }
+
+    header nav li{
+        width: 5.5em;
+    }
+
+    .name{
+        opacity: 0;
+    }
+
+    /* body index.html */
+    .homepage section:first-of-type{
+        height: 30em;
+    }
+
+    .homepage section:first-of-type h1{
+        font-size: 3.5em;
+    }
+
+    .homepage section:first-of-type h2{
+        font-size: 0.8em;
+    }
+
+    .homepage section:nth-of-type(2), .homepage section:nth-of-type(4){
+        gap: 1em;
+        height: 15em;
+    }
+
+    .homepage section:nth-of-type(2) img{
+        width: 8em;
+    }
+
+   .homepage section:nth-of-type(2) div, .homepage section:nth-of-type(4) div{
+        font-size: 0.5em;
+    }
+
+    .homepage section:nth-of-type(3){
+        gap: 1em;
+        height: 5em;
+        padding: 0;
+    }
+
+    .homepage section:nth-of-type(3) ul{
+        gap: 1em;
+    }
+
+    .homepage section:nth-of-type(3) li{
+        font-size: 0.5em;
+    }
+
+    .homepage section:nth-of-type(4) img{
+        width: 13em;
+    }
+
+    footer.home{
+        font-size: 0.5em;
+    }
+
+    /* css portfolio page */
+
+    .portfolio main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio section:first-of-type {
+        margin-top: 0em;
+    }
+
+    .portfolio section:first-of-type ul, 
+    .portfolio section:nth-of-type(2) ul, 
+    .portfolio section:nth-of-type(3) ul, 
+    .portfolio section:nth-of-type(4) ul, 
+    .portfolio section:nth-of-type(5) ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 5em;
+    }
+
+    .portfolio section:first-of-type img, 
+    .portfolio section:nth-of-type(2) img, 
+    .portfolio section:nth-of-type(3) img, 
+    .portfolio section:nth-of-type(4) img, 
+    .portfolio section:nth-of-type(5) img {
+        width: 15em;
+    }
+
+    ul::before{
+        opacity: 0;
+    }
+
+    .item{
+        margin-bottom: 21em;
+    }
+
+    .portfolio section:first-of-type, 
+    .portfolio section:nth-of-type(2), 
+    .portfolio section:nth-of-type(3), 
+    .portfolio section:nth-of-type(4), 
+    .portfolio section:nth-of-type(5) {
+        padding-bottom: 0;
+    }
+
+    .extra-info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    }
+
+    .extra-info p{
+        width: 20em;
+        font-size: 0.7em;
+    }
+
+    /* css experience */
+    .experience img {
+        width: 25em;
+        padding: 0;
+    }
+    
+}
